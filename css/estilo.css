@@ -1,11 +1,36 @@
+/* Reset CSS */
+* {
+    /* Margem = Externa */
+    margin: 0;
+    
+}
+
 
 body {
 
     /*  cor fundo */
-background:rgb(209, 116, 209);
-
+background:rgb(219, 134, 219);
 /* cor textos */
 color:white;
+}
 
+
+/* seletor para os <A> */
+a {
+   /* Propriedade e VALOR */
+   text-decoration: none;
+   color: black;
+}
+
+
+/* HEADER = Cabeçalho */
+header {
+  /* ROW Linha Horizontal */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(223, 90, 172);
+  /* Largura ou Comprimento */
+  width: 100%;
 
 }
