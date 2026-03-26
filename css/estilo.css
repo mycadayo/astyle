@@ -35,3 +35,12 @@ header {
   width: 100%;
 
 }
+
+/* UL sistema lista topicos*/
+.menu {
+  list-style: none;
+  /* Lista horizontal */
+  display: flex;
+  /* espaço entre TAGs */
+  gap: 1rem; /* um rem */
+}
