@@ -30,7 +30,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(223, 90, 172);
+  background-color: rgb(184, 0, 113);
   /* Largura ou Comprimento */
   width: 100%;
 
@@ -48,6 +48,11 @@ header {
 /* Tag NAV */
 .menu-desktop {
   display: none;
+}
+
+/* Logo */
+.logo {
+  width: 5rem;
 }
 
 /* Daqui pra cima Versão Mobile  */
