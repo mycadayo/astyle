@@ -1,82 +1,278 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AStyle</title>
+    <title>AStyle - Y2K Fashion & Style</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 
-    <!-- Bootstrap Icons -->
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"> 
-
-     <!-- CSS -->
-     <link rel="stylesheet" href="css/estilo.css">
-
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
+<body class="light-theme locked">
+    
+    <!-- Background Particles -->
+    <div id="bg-particles"></div>
 
-<body>
+    <!-- Custom Cursor -->
+    <div id="custom-cursor">✨</div>
 
-    <!-- ALT + SHIFT + A -->
+    <!-- Auth Screen -->
 
-    <!-- Cabeçalho -->
-    <header>
+    <div id="auth-overlay" class="auth-overlay">
+        <div class="auth-card">
+            <div class="auth-header">
+                <h1 class="logo">AStyle</h1>
+                <p>O seu portal Y2K nostálgico 💿✨</p>
 
-        <!-- Logo -->
-        <div class="header-logo">
-            <a href="#home">
-                <img src="img/logo.png" alt="" class="logo">
+
+            </div>
+
             
-            </a>
+            <form id="login-form" class="auth-form">
+                <input type="text" id="username" placeholder="Seu nome fashionista" required>
+                <input type="password" id="password" placeholder="Sua senha secreta" required>
+                <button type="submit" class="btn btn-primary btn-block">Entrar 💿✨</button>
+
+
+            </form>
+            
+            <div class="auth-footer">
+                <p>Bem-vinda de volta aos anos 2000!</p>
+            </div>
         </div>
-
-        <!-- Menu Desktop / PC -->
-        <nav class="menu-desktop">
-            <ul class="menu">
-                <li>
-                    <!-- Criar Links -->
-                    <a href="#home" class="menu-link active">
-                        <span class="menu-texto"> Home </span>
-                    </a>
-                </li>
-
-
-                <li>
-                    <a href="#projetos" class="menu-link">
-                        <span class="menu-texto">Projetos</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="sobre" class="menu-link">
-                        <span class="menu-texto">Sobre</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="contato" class="menu-link">
-                        <span class="menu-texto">Contato</span>
-                    </a>
-                </li>
-
-
-            </ul>
-
-        </nav>
-
-        <!-- Icone Trocar Cor Tema -->
-        <div class="header-toggle">
-
-            <!-- Icone Sol ou Lua -->
-       <i class="bi bi-sun" id="toggleTheme"></i>
-
-       <!-- Botao Hamburger -->
-        <button class="btn-menu-mobile" id="menuHamburger">
-            <i class="bi bi-list-stars"></i>
+    </div>
+    
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+        <div class="mobile-logo">AStyle</div>
+        <button id="hamburger-btn" aria-label="Abrir Menu">
+            <i class="fas fa-bars"></i>
         </button>
-
-        </div>
-
-
     </header>
 
-     </body>
+    <!-- Sidebar Navigation -->
+    <nav id="sidebar" class="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">AStyle</div>
+            <button id="collapse-btn" class="desktop-only" aria-label="Recolher Menu">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button id="close-mobile-btn" class="mobile-only" aria-label="Fechar Menu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
 
-    </html>
+        <ul class="nav-links">
+            <li>
+                <a href="#home" class="nav-item active">
+                    <i class="fas fa-house"></i>
+                    <span>🏠 Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="#moda" class="nav-item">
+                    <i class="fas fa-shirt"></i>
+                    <span>👗 Moda</span>
+                </a>
+            </li>
+            <li>
+                <a href="#historia" class="nav-item">
+                    <i class="fas fa-book"></i>
+                    <span>📚 História</span>
+                </a>
+            </li>
+            <li>
+                <a href="#musica" class="nav-item">
+                    <i class="fas fa-music"></i>
+                    <span>🎧 Música</span>
+                </a>
+            </li>
+            <li>
+                <a href="#beleza" class="nav-item">
+                    <i class="fas fa-sparkles"></i>
+                    <span>💄 Beleza</span>
+                </a>
+            </li>
+            <li>
+                <a href="#contato" class="nav-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>📞 Contato</span>
+                </a>
+            </li>
+        </ul>
+
+        <div class="sidebar-footer">
+            <button id="theme-toggle" class="theme-toggle" aria-label="Alternar Tema">
+                <i class="fas fa-sun" id="theme-icon"></i>
+                <span>Mudar Tema</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section id="home" class="content-section active">
+            <div class="hero-section">
+                <div class="hero-content">
+                    <div class="hero-text-content">
+                        <h1 class="hero-title">Y2K is back <br><span class="highlight">💿 💿</span></h1>
+
+
+
+                        <p class="hero-subtitle">Looks icônicos, brilho, cultura pop e tudo que marcou os anos 2000 — em um só lugar.</p>
+                        <div class="hero-buttons">
+                            <a href="#moda" class="btn btn-primary" id="explore-btn">Explorar</a>
+                            <a href="#moda" class="btn btn-secondary" id="trends-btn">Ver Tendências</a>
+                        </div>
+                    </div>
+
+                    <!-- Y2K Carousel -->
+                    <div class="carousel-wrapper">
+                        <div class="carousel-container" id="main-carousel">
+                            <!-- Slide 1: Moda -->
+                            <div class="carousel-card active" data-index="0">
+                                <img src="https://images.unsplash.com/photo-1621434533139-380184852936?q=80&w=500&auto=format&fit=crop" alt="Moda Y2K">
+                                <div class="card-content">
+                                    <h3>Moda 👗</h3>
+                                    <p>A moda dos anos 2000 voltou com tudo 💿✨</p>
+
+
+                                </div>
+                            </div>
+                            <!-- Slide 2: Música -->
+                            <div class="carousel-card next" data-index="1">
+                                <img src="https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?q=80&w=500&auto=format&fit=crop" alt="Música Y2K">
+                                <div class="card-content">
+                                    <h3>Música 🎧</h3>
+                                    <p>As músicas que marcaram uma geração 🎶</p>
+                                </div>
+                            </div>
+                            <!-- Slide 3: Beleza -->
+                            <div class="carousel-card hidden" data-index="2">
+                                <img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?q=80&w=500&auto=format&fit=crop" alt="Beleza Y2K">
+                                <div class="card-content">
+                                    <h3>Beleza 💄</h3>
+                                    <p>Brilho, gloss e atitude 💅</p>
+                                </div>
+                            </div>
+                            <!-- Slide 4: Cultura -->
+                            <div class="carousel-card prev" data-index="3">
+                                <img src="https://images.unsplash.com/photo-1542496658-e33a6d0d50f6?q=80&w=500&auto=format&fit=crop" alt="Cultura Y2K">
+                                <div class="card-content">
+                                    <h3>Cultura 📸</h3>
+                                    <p>Uma era cheia de personalidade 📱</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Outras Seções -->
+        <!-- Moda Section -->
+        <section id="moda" class="content-section">
+            <h1 class="section-title">👗 Moda Y2K</h1>
+            <p>O retorno das bolsas pequenas, cintos de corrente e óculos coloridos.</p>
+            
+            <div class="pinterest-grid">
+                <div class="grid-item">
+
+                    <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?q=80&w=500&auto=format&fit=crop" alt="Óculos Y2K">
+                    <div class="card-overlay">
+                        <h3>Acessórios</h3>
+                        <p>Óculos coloridos e transparentes.</p>
+                    </div>
+                </div>
+                <div class="grid-item card-tall">
+                    <img src="https://images.unsplash.com/photo-1548033511-c24940cfc34a?q=80&w=500&auto=format&fit=crop" alt="Jeans Y2K">
+                    <div class="card-overlay">
+                        <h3>Jeans</h3>
+                        <p>Cintura baixa e patches.</p>
+                    </div>
+                </div>
+                <div class="grid-item card-medium">
+                    <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?q=80&w=500&auto=format&fit=crop" alt="Look Retro">
+                    <div class="card-overlay">
+                        <h3>Ousadia</h3>
+                        <p>Mix de estampas e texturas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Música Section -->
+        <section id="musica" class="content-section">
+            <div class="music-header">
+                <h1 class="section-title">🎧 Top Hits 2000s</h1>
+                <p>Prepare o seu MP3! Os sons que definiram a década.</p>
+            </div>
+
+            <div id="playlist-container" class="playlist-grid">
+                <!-- Preenchido via JS -->
+            </div>
+        </section>
+
+        <!-- História Section -->
+        <section id="historia" class="content-section">
+            <h1 class="section-title">📚 A Cultura dos Anos 2000</h1>
+            <div class="history-content">
+                <div class="history-card">
+                    <h3>Era Digital</h3>
+                    <p>O nascimento das redes sociais, os blogs de moda e a estética pixelada.</p>
+                </div>
+
+                <div class="history-card">
+                    <h3>Ícones Pop</h3>
+                    <p>Britney, Paris Hilton e o surgimento dos reality shows que mudaram tudo.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Beleza Section -->
+        <section id="beleza" class="content-section">
+            <h1 class="section-title">💄 Beleza & Gloss</h1>
+            <div class="pinterest-grid">
+                <div class="grid-item card-tall">
+                    <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=500&auto=format&fit=crop" alt="Gloss Makeup">
+                    <div class="card-overlay">
+                        <h3>Gloss Lips</h3>
+                        <p>O brilho que não pode faltar.</p>
+                    </div>
+                </div>
+                <div class="grid-item">
+
+                    <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=500&auto=format&fit=crop" alt="Eye Makeup">
+                    <div class="card-overlay">
+                        <h3>Eyeshadow</h3>
+                        <p>Tons azuis e metalizados.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contato Section -->
+        <section id="contato" class="content-section">
+            <h1 class="section-title">📞 Contato</h1>
+            <div class="contact-card">
+
+                <form class="contact-form">
+                    <input type="text" placeholder="Seu Nome">
+                    <input type="email" placeholder="Seu E-mail">
+                    <textarea placeholder="Sua mensagem"></textarea>
+                    <button type="submit" class="btn btn-primary">Enviar Mensagem 💿✨</button>
+
+
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
