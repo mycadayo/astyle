@@ -135,7 +135,7 @@
                         <div class="carousel-container" id="main-carousel">
                             <!-- Slide 1: Moda -->
                             <div class="carousel-card active" data-index="0">
-                                <img src="https://images.unsplash.com/photo-1621434533139-380184852936?q=80&w=500&auto=format&fit=crop" alt="Moda Y2K">
+                                <img src="img/moda.webp" alt="Moda Y2K">
                                 <div class="card-content">
                                     <h3>Moda 👗</h3>
                                     <p>A moda dos anos 2000 voltou com tudo 💿✨</p>
@@ -145,7 +145,7 @@
                             </div>
                             <!-- Slide 2: Música -->
                             <div class="carousel-card next" data-index="1">
-                                <img src="https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?q=80&w=500&auto=format&fit=crop" alt="Música Y2K">
+                                <img src="img/album.jfif" alt="Música Y2K">
                                 <div class="card-content">
                                     <h3>Música 🎧</h3>
                                     <p>As músicas que marcaram uma geração 🎶</p>
@@ -153,7 +153,7 @@
                             </div>
                             <!-- Slide 3: Beleza -->
                             <div class="carousel-card hidden" data-index="2">
-                                <img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?q=80&w=500&auto=format&fit=crop" alt="Beleza Y2K">
+                                <img src="img/beleza.jfif" alt="Beleza Y2K">
                                 <div class="card-content">
                                     <h3>Beleza 💄</h3>
                                     <p>Brilho, gloss e atitude 💅</p>
@@ -161,7 +161,7 @@
                             </div>
                             <!-- Slide 4: Cultura -->
                             <div class="carousel-card prev" data-index="3">
-                                <img src="https://images.unsplash.com/photo-1542496658-e33a6d0d50f6?q=80&w=500&auto=format&fit=crop" alt="Cultura Y2K">
+                                <img src="img/cultura.jfif" alt="Cultura Y2K">
                                 <div class="card-content">
                                     <h3>Cultura 📸</h3>
                                     <p>Uma era cheia de personalidade 📱</p>
@@ -178,29 +178,59 @@
         <!-- Moda Section -->
         <section id="moda" class="content-section">
             <h1 class="section-title">👗 Moda Y2K</h1>
-            <p>O retorno das bolsas pequenas, cintos de corrente e óculos coloridos.</p>
+            <p class="section-desc">O retorno das bolsas pequenas, cintos de corrente e a estética que marcou os anos 2000.</p>
             
-            <div class="pinterest-grid">
-                <div class="grid-item">
+            <!-- Category Menu -->
+            <div class="moda-categories">
+                <button class="moda-category-btn active" data-category="looks">Looks</button>
+                <button class="moda-category-btn" data-category="acessorios">Acessórios</button>
+                <button class="moda-category-btn" data-category="ousadia">Ousadia</button>
+            </div>
 
-                    <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?q=80&w=500&auto=format&fit=crop" alt="Óculos Y2K">
-                    <div class="card-overlay">
-                        <h3>Acessórios</h3>
-                        <p>Óculos coloridos e transparentes.</p>
+            <!-- Galleries -->
+            <div class="moda-galleries-container">
+                <!-- Looks Gallery -->
+                <div id="gallery-looks" class="moda-gallery active">
+                    <div class="simple-grid">
+                        <div class="grid-item">
+                            <img src="img/looks (2).jpg" alt="Look Y2K 1">
+                        </div>
+                        <div class="grid-item">
+                            <img src="img/looks (3).jpg" alt="Look Y2K 2">
+                        </div>
+                        <div class="grid-item">
+                            <img src="img/looks.jpg" alt="Look Y2K 3">
+                        </div>
                     </div>
                 </div>
-                <div class="grid-item card-tall">
-                    <img src="https://images.unsplash.com/photo-1548033511-c24940cfc34a?q=80&w=500&auto=format&fit=crop" alt="Jeans Y2K">
-                    <div class="card-overlay">
-                        <h3>Jeans</h3>
-                        <p>Cintura baixa e patches.</p>
+
+                <!-- Acessórios Gallery -->
+                <div id="gallery-acessorios" class="moda-gallery">
+                    <div class="simple-grid">
+                        <div class="grid-item">
+                            <img src="img/acessorio.jpg" alt="Bolsa Baguette">
+                        </div>
+                        <div class="grid-item">
+                            <img src="img/acessorio (2).jpg" alt="Óculos Coloridos">
+                        </div>
+                        <div class="grid-item">
+                            <img src="img/acessorio (3).jpg" alt="Cinto de Corrente">
+                        </div>
                     </div>
                 </div>
-                <div class="grid-item card-medium">
-                    <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?q=80&w=500&auto=format&fit=crop" alt="Look Retro">
-                    <div class="card-overlay">
-                        <h3>Ousadia</h3>
-                        <p>Mix de estampas e texturas.</p>
+
+                <!-- Ousadia Gallery -->
+                <div id="gallery-ousadia" class="moda-gallery">
+                    <div class="simple-grid">
+                        <div class="grid-item">
+                            <img src="img/ousadia.jpg" alt="Look Ousado 1">
+                        </div>
+                        <div class="grid-item">
+                            <img src="img/ousadia (2).jpg" alt="Look Ousado 2">
+                        </div>
+                        <div class="grid-item">
+                            <img src="img/oculos.jpg" alt="Look Ousado 3">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -221,36 +251,117 @@
         <!-- História Section -->
         <section id="historia" class="content-section">
             <h1 class="section-title">📚 A Cultura dos Anos 2000</h1>
-            <div class="history-content">
-                <div class="history-card">
-                    <h3>Era Digital</h3>
-                    <p>O nascimento das redes sociais, os blogs de moda e a estética pixelada.</p>
+            
+            <div class="history-container">
+                <!-- Era Digital -->
+                <div class="history-main-card">
+                    <div class="card-header">
+                        <i class="fas fa-desktop"></i>
+                        <h2>Era Digital</h2>
+                    </div>
+                    <div class="card-body">
+                        <p>Os anos 2000 foram o começo de um mundo novo — meio bagunçado, colorido, cheio de personalidade e MUITO divertido. A internet ainda era lenta, com aquele barulhinho da conexão, mas isso não impedia ninguém de passar horas online vivendo intensamente cada detalhe.</p>
+                        
+                        <div class="history-grid">
+                            <div class="history-item">
+                                <h3><i class="fas fa-comment-dots"></i> MSN Messenger</h3>
+                                <p>As pessoas entravam no MSN, colocavam status cheios de emoção, escolhiam uma música que representava o momento e ficavam conversando até tarde. Era tudo muito mais pessoal — cada detalhe dizia algo sobre você.</p>
+                            </div>
+                            <div class="history-item">
+                                <h3><i class="fas fa-camera-retro"></i> Blogs & Fotologs</h3>
+                                <p>Os blogs de moda começaram a surgir como diários reais. Não era algo perfeito — era espontâneo, verdadeiro. Fotos com flash estourado, poses no espelho, looks montados com o que tinha no guarda-roupa. E isso era exatamente o charme.</p>
+                            </div>
+                        </div>
+
+                        <p class="highlight-box">A estética da época era inconfundível: glitter, fundos brilhantes, cores fortes, fontes diferentes, gifs piscando… tudo ao mesmo tempo. Era exagerado, mas era único.</p>
+
+                        <h3>🎧 E fora da internet… a vida era ainda mais intensa.</h3>
+                        <p>As pessoas saíam muito. Ir ao shopping com as amigas era um evento. Tirar fotos, provar roupas, rir alto, comprar uma bolsinha nova — tudo virava memória. Mas a noite… a noite era outro nível.</p>
+                        
+                        <div class="nightlife-section">
+                            <div class="nightlife-text">
+                                <h3>🔥 Noite & Baladas</h3>
+                                <p>As baladas dos anos 2000 eram cheias, animadas e com uma energia que dava pra sentir no corpo. Luzes piscando, pista lotada e todo mundo dançando junto. No Brasil, o fenômeno <strong>Furacão 2000</strong> dominava as pistas com batidas marcantes e coreografias que todo mundo sabia.</p>
+                                <p>Era comum ver grupos dançando sincronizados, repetindo passos que viralizavam muito antes das redes sociais como hoje. A música alta, o grave batendo, o calor da pista e aquela sensação de liberdade… era impossível ficar parado.</p>
+                            </div>
+                        </div>
+
+                        <p>As pessoas se arrumavam pra sair — maquiagem com gloss, brilho, roupas estilosas, acessórios chamativos. Tudo fazia parte da experiência. Não era só sair, era viver o momento.</p>
+                        
+                        <div class="history-footer">
+                            <p>Os anos 2000 eram isso: intensidade, liberdade, expressão. Uma época em que tudo parecia novo, tudo parecia possível… e cada momento virava uma memória inesquecível!</p>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="history-card">
-                    <h3>Ícones Pop</h3>
-                    <p>Britney, Paris Hilton e o surgimento dos reality shows que mudaram tudo.</p>
+                <!-- Ícones Pop -->
+                <div class="history-side-section">
+                    <div class="section-subtitle">
+                        <span>⭐</span>
+                        <h2>Ícones Pop</h2>
+                    </div>
+                    
+                    <div class="icons-container">
+                        <div class="icon-card">
+                            <div class="icon-img-placeholder">💅</div>
+                            <div class="icon-info">
+                                <h4>Britney Spears</h4>
+                                <p>O grande nome do pop. Seus looks, coreografias e músicas estavam por toda parte. Ela influenciou uma geração inteira com seu estilo marcante.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="icon-card">
+                            <div class="icon-img-placeholder">🛍️</div>
+                            <div class="icon-info">
+                                <h4>Paris Hilton</h4>
+                                <p>Trouxe o glamour e o lifestyle das celebridades para o dia a dia. Com seu estilo “patricinha” cheio de rosa, brilho e luxo, ela transformou a ideia de fama.</p>
+                            </div>
+                        </div>
+
+                        <div class="icon-card">
+                            <div class="icon-img-placeholder">🎸</div>
+                            <div class="icon-info">
+                                <h4>Avril Lavigne</h4>
+                                <p>Trouxe uma estética mais rebelde, com gravatas, tênis e atitude “não ligo”. Ela representava o lado alternativo da época.</p>
+                            </div>
+                        </div>
+
+                        <div class="icon-summary">
+                            <p>Christina Aguilera, Lindsay Lohan e Hilary Duff também foram referências fortes. Os reality shows ganharam força, aproximando o público desses ícones que eram o reflexo de uma geração inteira.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Beleza Section -->
         <section id="beleza" class="content-section">
-            <h1 class="section-title">💄 Beleza & Gloss</h1>
+            <h1 class="section-title">💄 Tendências de Beleza 2000</h1>
             <div class="pinterest-grid">
+                <!-- Glosses -->
+                <div class="grid-item card-medium">
+    <img src="img/gloss.jpg" alt="Glosses">
+    <div class="card-overlay">
+        <h3>Glosses</h3>
+        <p>O brilho labial era a marca registrada dessa era.</p>
+    </div>
+</div>
+                
+                <!-- Sombras -->
                 <div class="grid-item card-tall">
-                    <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=500&auto=format&fit=crop" alt="Gloss Makeup">
+                    <img src="img/make.jpg" alt="Make">
                     <div class="card-overlay">
-                        <h3>Gloss Lips</h3>
-                        <p>O brilho que não pode faltar.</p>
+                        <h3>Sombras</h3>
+                        <p>Tons azuis, lilás e metalizados dominavam as pálpebras.</p>
                     </div>
                 </div>
-                <div class="grid-item">
 
-                    <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=500&auto=format&fit=crop" alt="Eye Makeup">
+                <!-- Sobrancelhas -->
+                <div class="grid-item card-medium">
+                    <img src="img/sobrancelha.jpg" alt="Sobrancelhas">
                     <div class="card-overlay">
-                        <h3>Eyeshadow</h3>
-                        <p>Tons azuis e metalizados.</p>
+                        <h3>Sobrancelhas</h3>
+                        <p>Sobrancelhas finas e super definidas eram a tendência absoluta.</p>
                     </div>
                 </div>
             </div>

@@ -244,6 +244,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
     initCarousel();
 
+    // --- Contact Form Submission ---
+    const contactForm = document.querySelector('.contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            playSound('click');
+
+            const name = contactForm.querySelector('input[placeholder="Seu Nome"]').value.trim();
+            const email = contactForm.querySelector('input[placeholder="Seu E-mail"]').value.trim();
+            const message = contactForm.querySelector('textarea').value.trim();
+            const btn = contactForm.querySelector('button');
+            const originalText = btn.innerHTML;
+
+            // basic validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!name || !email || !message || !emailRegex.test(email)) {
+                alert('não conseguimos enviar :(');
+                return;
+            }
+
+            btn.innerHTML = 'Enviando... 💿';
+            btn.disabled = true;
+
+            // compose mailto link
+            const subject = encodeURIComponent('Contato do site AStyle');
+            const body = encodeURIComponent(`Nome: ${name}\nEmail: ${email}\n\nMensagem:\n${message}`);
+            const mailtoLink = `mailto:amandamarcolino32@gmail.com?subject=${subject}&body=${body}`;
+
+            // show success feedback then open mail client
+            alert('email enviado com sucesso');
+            window.location.href = mailtoLink;
+
+            btn.innerHTML = originalText;
+            btn.disabled = false;
+            contactForm.reset();
+        });
+    }
+
     // --- Parallax Effect ---
     window.addEventListener('scroll', () => {
         const scrolled = window.pageYOffset;
@@ -289,6 +327,33 @@ document.addEventListener('DOMContentLoaded', () => {
             });
             
             playlistContainer.appendChild(card);
+        });
+    }
+
+    // --- Moda Gallery Switcher ---
+    const modaBtns = document.querySelectorAll('.moda-category-btn');
+    const modaGalleries = document.querySelectorAll('.moda-gallery');
+
+    if (modaBtns.length > 0) {
+        modaBtns.forEach(btn => {
+            btn.addEventListener('mouseenter', () => playSound('hover'));
+            btn.addEventListener('click', () => {
+                const category = btn.getAttribute('data-category');
+                
+                // Update buttons
+                modaBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                // Update galleries
+                modaGalleries.forEach(gallery => {
+                    gallery.classList.remove('active');
+                    if (gallery.id === `gallery-${category}`) {
+                        gallery.classList.add('active');
+                    }
+                });
+                
+                playSound('click');
+            });
         });
     }
 });
